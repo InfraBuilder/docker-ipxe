@@ -51,7 +51,7 @@ case "$1" in
             echo "  }"
             echo "}"
         ) > $DHCPCONF
-        
+        touch /var/lib/dhcp/dhcpd.leases
         exec /usr/sbin/dhcpd -4 -f -d --no-pid -cf /etc/dhcp/dhcpd.conf $INTERFACES
         ;;
     *) 
