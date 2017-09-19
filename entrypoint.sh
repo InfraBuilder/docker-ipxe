@@ -5,6 +5,7 @@
 case "$1" in 
     tftp-server)
         mkdir -p "$TFTPD_DIR"
+        chown -R o+r "$TFTPD_DIR"
         echo "Starting TFTP Server"
         exec /usr/sbin/in.tftpd -s "$TFTPD_DIR" -vv -L
         ;;
