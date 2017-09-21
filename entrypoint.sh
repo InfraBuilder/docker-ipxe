@@ -27,12 +27,11 @@ case "$1" in
         [ "$DHCP_DEFAULT_LEASE_TIME" = "" ] && DHCP_DEFAULT_LEASE_TIME=600
         [ "$DHCP_MAX_LEASE_TIME" = "" ] && DHCP_MAX_LEASE_TIME=7200
         [ "$DHCP_NET" = "" ] && DHCP_NET=10.1.1.0
-        [ "$DHCP_NET" = "" ] && DHCP_NET=10.1.1.0
         [ "$DHCP_MASK" = "" ] && DHCP_MASK=255.255.255.0
         [ "$DHCP_START" = "" ] && DHCP_START=10.1.1.100
-        [ "$DHCP_STOP" = "" ] && DHCP_STOPT=10.1.1.199
+        [ "$DHCP_STOP" = "" ] && DHCP_STOP=10.1.1.199
         [ "$DHCP_GW" = "" ] && DHCP_GW=10.1.1.254
-        [ "$DHCP_DNS" = "" ] && DHCP_DNS=10.1.1.254
+        [ "$DHCP_DNS" = "" ] && DHCP_DNS=8.8.8.8
         
         (
             echo "ddns-update-style none;"
